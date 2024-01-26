@@ -139,9 +139,31 @@ object utils {
   }
 
 
-  def reconciliation_agregee(df1: DataFrame, df2: DataFrame): DataFrame = {
-      df1.join(df2, Seq("numero", "type_recharge"), "full")
+  def agg_date_type_recharge(dataFrame: DataFrame, alias: String): DataFrame = {
+
+    val cnt = count("*").as(alias + "_cnt")
+    val mnt = sum("montant").as(alias + "_mnt")
+
+    dataFrame.groupBy("date", "type_recharge").agg(
+      cnt,
+      mnt
+    ).select("date", "type_recharge", "cnt", "mnt")
   }
+
+
+  def reconciliation_agregee(dfIn: DataFrame, dfZebra: DataFrame): DataFrame = {
+
+    val dfInAgg = agg_date_type_recharge(dfIn, "in")
+    val dfZebraAgg = agg_date_type_recharge(dfZebra, "ze")
+
+    dfInAgg.join(dfZebraAgg, Seq("date", "type_recharge"), "full")
+  }
+
+  /*
+
+  SELECT date, type_recharge,  from table1 a full join table2 b on a.date = b.date and  a.type_recharge = b.type_recharge
+
+   */
 
 
 }

@@ -1,16 +1,6 @@
 package implementations
 
-//import java.nio.file.FileSystem
-
 import fonctions.{read_write, schema_chemin_hdfs, utils}
-
-import org.apache.spark.sql.SparkSession
-import org.apache.commons.mail.MultiPartEmail
-import org.apache.hadoop.fs.{FileSystem, Path}
-
-import javax.activation.DataHandler
-import javax.mail.internet.{MimeBodyPart, MimeMultipart}
-import javax.mail.util.ByteArrayDataSource
 
 
 object reconciliation2 {
@@ -41,6 +31,8 @@ object reconciliation2 {
 
     val reconciliationRecharge = uniqueRowsWithSourceInDetail.union(uniqueRowsWithSourceDetaillee)
 
+    val reconciliationAggregee = utils.reconciliation_agregee(uniqueRowsWithoutSourceInDetail, uniqueRowsWithoutSourceDetaillee)
+
 
 
 
@@ -56,15 +48,13 @@ object reconciliation2 {
 
     // Gerer les espaces blancs
 
-    uniqueRowsWithoutSourceInDetail.printSchema()
-    uniqueRowsWithoutSourceDetaillee.printSchema()
-    reconciliationRecharge.printSchema()
+    reconciliationAggregee.printSchema()
 
-    uniqueRowsWithSourceInDetail.show(100, false)
-    uniqueRowsWithSourceDetaillee.show(100, false)
-    reconciliationRecharge.filter(reconciliationRecharge("source_in_zebra") === "IN").show(false)
-    reconciliationRecharge.filter(reconciliationRecharge("source_in_zebra") === "ZEBRA").show(false)
-    reconciliationRecharge.filter(reconciliationRecharge("source_in_zebra") === "aaaaa").show(false)
+    /*uniqueRowsWithSourceInDetail.show(100, false)
+    uniqueRowsWithSourceDetaillee.show(100, false)*/
+
+    reconciliationAggregee.show(100, false)
+
 
 
 

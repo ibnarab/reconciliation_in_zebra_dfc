@@ -1,11 +1,19 @@
 package fonctions
 
+//import java.nio.file.FileSystem
+
+import fonctions.{read_write, schema_chemin_hdfs, utils}
+
+import org.apache.spark.sql.SparkSession
+import org.apache.commons.mail.MultiPartEmail
+import org.apache.hadoop.fs.{FileSystem, Path}
+
 import javax.activation.DataHandler
 import javax.mail.internet.{MimeBodyPart, MimeMultipart}
 import javax.mail.util.ByteArrayDataSource
-import org.apache.commons.mail.MultiPartEmail
-import org.apache.hadoop.fs.{FileSystem, Path}
-import org.apache.spark.sql.SparkSession
+
+
+
 
 object mail {
 
