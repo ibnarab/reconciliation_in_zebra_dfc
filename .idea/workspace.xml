@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3857bdb2-f4a1-4a68-859a-0310e90d5890" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/project/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reconciliation_in_zebra" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/constants.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/utils.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+              <folding>
+                <element signature="e#19#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/schema_chemin_hdfs.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/read_write.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/implementations/reconciliation2.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="e#60#116#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/mail.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-764">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/implementations/brouillon.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2448">
+              <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Package Object" />
+        <option value="Scala Object" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rechargeInDetailFilteredDF</find>
+      <find>type_recharge_detaillee</find>
+      <find>rechargeFinal</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>rechargeInDetailDF</replace>
+      <replace>detailleeAddRenameColumns</replace>
+      <replace>type_recharge</replace>
+      <replace>reconciliationRecharge</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/scala/hello3_2.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hello3.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/reconciliation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/test.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/test1" />
+        <option value="$PROJECT_DIR$/src/main/scala/exception.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/check.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/reconciliation2.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/check.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/check.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/exception.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/reconciliation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/reconciliation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/fonctions/constants.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/fonctions/utils.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main/main.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main/reconciliation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main/reconciliation2.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main/check.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/fonctions/constants.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/fonctions/schema.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/fonctions/read_write.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/fonctions/schema_chemin_hdfs.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/implementations/brouillon.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/main/scala/implementations/mail.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/fonctions/mail.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/implementations/reconciliation2.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/fonctions/utils.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1043" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="fonctions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reconciliation_in_zebra" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reconciliation_in_zebra" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.reconciliation">
+    <configuration name="hello3" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="hello3" />
+      <module name="reconciliation_in_zebra" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="reconciliation" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sonatel.dst.dbm.squed.reconciliation" />
+      <module name="reconciliation_in_zebra" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.reconciliation" />
+        <item itemvalue="Application.hello3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="reconciliation_in_zebra" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="reconciliation_in_zebra [file:/C:/Users/DIOP028957/IdeaProjects/reconciliation_in_zebra/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="reconciliation_in_zebra-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/build.sbt" value="3818544184" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="3280644262" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3857bdb2-f4a1-4a68-859a-0310e90d5890" name="Default Changelist" comment="" />
+      <created>1705608195001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705608195001</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42834008" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4341637" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="11" weight="0.32839838" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="sbt" order="8" weight="0.32969153" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Continent-Country.csv" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hello3_2.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hello3.scala" />
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.apache.spark/spark-sql-api_2.12/srcs/spark-sql-api_2.12-3.5.0-sources.jar!/org/apache/spark/sql/types/StringType.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/test.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/test1" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/reconciliation.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/check.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/exception.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/check.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/check.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/reconciliation2.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/exception.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/package.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/reconciliation.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/constants.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/utils.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/fonctions/package.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main/reconciliation.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/squed/main/check.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sonatel/dst/dbm/reconciliation.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/implementations/main.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/implementations/brouillon.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/read_write.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/schema_chemin_hdfs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/constants.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/implementations/mail.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
+          <folding>
+            <element signature="e#25#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/mail.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-764">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/implementations/reconciliation2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#60#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/fonctions/utils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+          <folding>
+            <element signature="e#19#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

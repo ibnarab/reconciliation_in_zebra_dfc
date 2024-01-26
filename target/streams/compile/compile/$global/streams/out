@@ -1,0 +1,41 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:102:52: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      if (col("canal_recharge") === "Ca Credit OM" && col("channel_name") === "Rech_OM_O&M")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:104:57: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "Ca Credit OM" && col("channel_name") === "Webservices Recharge(Orange Money)")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:106:57: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "Ca Credit OM" && col("channel_name") === "Rech_OM_Distri")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:108:38: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "CA Wave")[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:110:38: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "Ca IAH")[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:112:53: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "Ca Seddo" && col("channel_name") === "Corporate Recharge")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:114:53: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "Ca Seddo" && col("channel_name").isin("MobileSelfService", "IT Subscription", "RMS Charging", "Webservices Recharge(C2S)"))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\reconciliation2.scala:116:38: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.apache.spark.sql.Column[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (col("canal_recharge") === "Ca Cartes")[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m
