@@ -141,18 +141,18 @@ object utils {
 
   def agg_date_type_recharge(dataFrame: DataFrame, alias: String): DataFrame = {
 
-    val dfConverted = dataFrame.withColumn("date", to_date(col("date"), "yyyyMMdd"))
+    val dfConverted = dataFrame.withColumn("day", to_date(col("date"), "yyyyMMdd"))
 
-    val formattedDF = dfConverted.withColumn("date", date_format(col("date"), "dd/MM/yyyy"))
+    val formattedDF = dfConverted.withColumn("day", date_format(col("day"), "dd/MM/yyyy"))
 
     // Grouper les données et effectuer les agrégations
-    val groupedDF = formattedDF.groupBy("date", "type_recharge")
+    val groupedDF = formattedDF.groupBy("day", "type_recharge")
       .agg(
         count("*").as(alias + "_cnt"),
         sum("montant").as(alias + "_mnt")
       )
 
-    groupedDF.select("date", "type_recharge", alias + "_cnt", alias + "_mnt")
+    groupedDF.drop("date").select("day", "type_recharge", alias + "_cnt", alias + "_mnt")
 
   }
 
@@ -162,15 +162,15 @@ object utils {
     val dfInAgg = agg_date_type_recharge(dfIn, "in")
     val dfZebraAgg = agg_date_type_recharge(dfZebra, "ze")
 
-    val dfFinal = dfInAgg.join(dfZebraAgg, Seq("date", "type_recharge"), "full")
-    dfFinal.orderBy("date", "type_recharge").na.fill(0)
+    val dfJoin = dfInAgg.join(dfZebraAgg, Seq("day", "type_recharge"), "full")
+    val dfFinal = dfJoin
+      .withColumn("ecart_cnt",
+        when(col("in_cnt") >= col("ze_cnt"), col("in_cnt") - col("ze_cnt")).otherwise(-(col("ze_cnt") - col("in_cnt")) ))
+      .withColumn("ecart_mnt",
+        when(col("in_mnt") >= col("ze_mnt"), col("in_mnt") - col("ze_mnt")).otherwise(-(col("ze_mnt") - col("in_mnt")) ))
+    dfFinal.select("day", "type_recharge", "ecart_cnt", "ecart_mnt", "in_cnt", "in_mnt", "ze_cnt", "ze_mnt").orderBy("day", "type_recharge").na.fill(0)
   }
 
-  /*
-
-  SELECT date, type_recharge,  from table1 a full join table2 b on a.date = b.date and  a.type_recharge = b.type_recharge
-
-   */
 
 
 }
