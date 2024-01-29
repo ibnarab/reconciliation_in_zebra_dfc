@@ -141,12 +141,27 @@ object utils {
 
   def agg_date_type_recharge(dataFrame: DataFrame, alias: String): DataFrame = {
 
+    // Convertir la colonne 'date' en format date
+    val dfConverted = dataFrame.withColumn("date", to_date(col("date"), "yyyyMMdd"))
 
-    dataFrame.groupBy("date", "type_recharge").agg(
-      count("*").as(alias + "_cnt"),
-      sum("montant").as(alias + "_mnt")
-    ).withColumn("date", date_format(to_date(col("date"), "yyyyMMdd"), "dd/MM/yyyy"))
-    .select("date", "type_recharge", alias + "_cnt", alias + "_mnt").orderBy("date")
+    // Grouper les données et effectuer les agrégations
+    val groupedDF = dfConverted.groupBy("date", "type_recharge")
+      .agg(
+        count("*").as(alias + "_cnt"),
+        sum("montant").as(alias + "_mnt")
+      )
+
+    // Remplacer les valeurs nulles par 0 dans les colonnes spécifiques
+    val filledDF = groupedDF
+      .withColumn(alias + "_cnt", coalesce(col(alias + "_cnt"), lit(0)))
+      .withColumn(alias + "_mnt", coalesce(col(alias + "_mnt"), lit(0)))
+
+    // Trier le DataFrame par la colonne 'date'
+    val sortedDF = filledDF.orderBy("date")
+
+    // Sélectionner les colonnes requises
+    sortedDF.select("date", "type_recharge", alias + "_cnt", alias + "_mnt")
+
   }
 
 
