@@ -2,6 +2,8 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	implementations[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\target\scala-2.12\classes\implementations[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fonctions\mail$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\target\scala-2.12\classes\fonctions\mail$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	fonctions\read_write.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\target\scala-2.12\classes\fonctions\read_write.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	implementations\brouillon.class[0m
@@ -32,4 +34,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\target\scala-2.12\classes\fonctions\read_write$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	implementations\reconciliation2$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\target\scala-2.12\classes\implementations\reconciliation2$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fonctions\mail.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\target\scala-2.12\classes\fonctions\mail.class[0m
 [0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

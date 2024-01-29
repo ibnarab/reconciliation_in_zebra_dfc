@@ -141,13 +141,12 @@ object utils {
 
   def agg_date_type_recharge(dataFrame: DataFrame, alias: String): DataFrame = {
 
-    val cnt = count("*").as(alias + "_cnt")
-    val mnt = sum("montant").as(alias + "_mnt")
 
     dataFrame.groupBy("date", "type_recharge").agg(
-      cnt,
-      mnt
-    ).select("date", "type_recharge", "cnt", "mnt")
+      count("*").as(alias + "_cnt"),
+      sum("montant").as(alias + "_mnt")
+    ).withColumn("date", date_format(to_date(col("date"), "yyyyMMdd"), "dd/MM/yyyy"))
+    .select("date", "type_recharge", alias + "_cnt", alias + "_mnt").orderBy("date")
   }
 
 
