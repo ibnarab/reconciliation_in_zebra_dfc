@@ -149,18 +149,18 @@ object utils {
       .agg(
         count("*").as(alias + "_cnt"),
         sum("montant").as(alias + "_mnt")
-      )
+      ).orderBy("date")
 
     // Remplacer les valeurs nulles par 0 dans les colonnes spécifiques
     val filledDF = groupedDF
       .withColumn(alias + "_cnt", coalesce(col(alias + "_cnt"), lit(0)))
-      .withColumn(alias + "_mnt", coalesce(col(alias + "_mnt"), lit(0)))
+      .withColumn(alias + "_mnt", coalesce(col(alias + "_mnt"), lit(0))).orderBy("date")
 
     // Trier le DataFrame par la colonne 'date'
     val sortedDF = filledDF.orderBy("date")
 
     // Sélectionner les colonnes requises
-    sortedDF.select("date", "type_recharge", alias + "_cnt", alias + "_mnt")
+    sortedDF.select("date", "type_recharge", alias + "_cnt", alias + "_mnt").orderBy("date")
 
   }
 
