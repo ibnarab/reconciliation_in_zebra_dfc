@@ -1,8 +1,10 @@
 package fonctions
 
 import org.apache.spark.sql.types._
+import java.util.Calendar
 
 object schema_chemin_hdfs {
+
 
   val schemaRechargeInDetailDF = StructType(
     Array(
@@ -28,7 +30,7 @@ object schema_chemin_hdfs {
     )
   )
 
-  val chemin_in_detail = "/dlk/osn/refined/Recharge/recharge_in_detail/year=2023/month=12"
+
 
   val schemaRechargeDetaillee = StructType(
     Array(
@@ -48,7 +50,25 @@ object schema_chemin_hdfs {
     )
   )
 
-  val chemin_detaillee = "/dlk/osn/refined/Recharge/recharge_detaillee/year=2023/month=12"
+  def annee(): Int = {
+
+    // Obtenir la date du mois précédent
+    val calendar = Calendar.getInstance()
+    calendar.add(Calendar.MONTH, -1)
+    val year = calendar.get(Calendar.YEAR)
+    year
+  }
+
+  def moisPrecedent() : Int = {
+    val calendar = Calendar.getInstance()
+    calendar.add(Calendar.MONTH, -1)
+    val month = calendar.get(Calendar.MONTH) + 1
+    month
+  }
+
+  val chemin_in_detail = "/dlk/osn/refined/Recharge/recharge_in_detail/year="+annee()+"/month="+moisPrecedent()
+
+  val chemin_detaillee = "/dlk/osn/refined/Recharge/recharge_detaillee/year="+annee()+"/month="+moisPrecedent()
 
 
 }

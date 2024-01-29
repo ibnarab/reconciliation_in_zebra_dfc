@@ -3,7 +3,7 @@ package implementations
 import fonctions.{read_write, schema_chemin_hdfs, utils}
 
 
-object reconciliation2 {
+object reconciliation_in_zebra {
 
   def main(args: Array[String]): Unit = {
 
@@ -34,9 +34,8 @@ object reconciliation2 {
     val reconciliationAggregee = utils.reconciliation_agregee(uniqueRowsWithoutSourceInDetail, uniqueRowsWithoutSourceDetaillee)
 
 
-
-
-
+    /*read_write.writeHiveInZebraGeneral(reconciliationRecharge)
+    read_write.writeHiveInZebraAgr(reconciliationAggregee)*/
 
 
 
