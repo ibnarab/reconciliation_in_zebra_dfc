@@ -49,7 +49,9 @@ object utils {
     def add_columns_and_rename_detail_in(df: DataFrame) : DataFrame =  {
 
       df
-        .withColumnRenamed("day"             ,   "date")
+        //.withColumnRenamed("day"             ,   "date")
+        .withColumn("year"                       , substring(col("day"), 1, 4))
+        .withColumn("month"                      , substring(col("day"), 5, 2))
         .withColumnRenamed("msisdn"          , "numero")
         .withColumn(          "type_recharge"   ,
              when(col("canal_recharge")  === "Ca Credit OM" && col("channel_name") === "Rech_OM_O&M"                                                                             , lit("Recharge Orange Money O&M"))
@@ -75,16 +77,16 @@ object utils {
                     "zone_drv"                    ,
                     "zone_drvnew"                 ,
                     "zone_dvri"                   ,
-                    "zone_dvrinew"                ,
-                    "year"                        ,
-                    "month"
+                    "zone_dvrinew"
         )
         .select(
-               "date"                        ,
-              "numero"                      ,
-                    "type_recharge"               ,
+               "numero"                      ,
+              "type_recharge"               ,
                     "formule"                     ,
-                    "montant"
+                    "montant"                     ,
+                    "year"                        ,
+                    "month"                       ,
+                     "day"
         )
     }
 
@@ -92,7 +94,9 @@ object utils {
     def add_columns_and_rename_detaillee(df: DataFrame) : DataFrame =  {
 
       df
-        .withColumnRenamed("day"                                , "date")
+        //.withColumnRenamed("day"                                , "date")
+        .withColumn("year"                       , substring(col("day"), 1, 4))
+        .withColumn("month"                      , substring(col("day"), 5, 2))
         .withColumnRenamed("msisdn"                             , "numero")
         .withColumn("type_recharge"                                ,
           when(col("type_recharge")             === "M"            , lit("Recharge Orange Money O&M"))
@@ -118,16 +122,16 @@ object utils {
           "heure_recharge"                                                   ,
           "canal_recharge"                                                   ,
           "rech_carte_verte"                                                 ,
-          "type_recharge_desc"                                               ,
-          "year"                                                             ,
-          "month"                                                            ,
+          "type_recharge_desc"
         )
         .select(
-           "date"                                                       ,
           "numero"                                                     ,
-                "type_recharge"                                              ,
+          "type_recharge"                                             ,
                 "formule"                                                    ,
                 "montant"                                                    ,
+                "year"                                                       ,
+                "month"                                                      ,
+                 "day"
         )
     }
 
@@ -135,24 +139,33 @@ object utils {
 
   def unique_rows_with_source(dataFrame: DataFrame, valeur: String): DataFrame = {
 
-      dataFrame.withColumn("source_in_zebra", lit(valeur))
+      dataFrame.withColumn("source_in_zebra", lit(valeur)).select(
+        "numero"          ,
+        "type_recharge"  ,
+              "formule"         ,
+              "montant"         ,
+              "source_in_zebra" ,
+              "year"            ,
+              "month"           ,
+              "day"
+      )
   }
 
 
   def agg_date_type_recharge(dataFrame: DataFrame, alias: String): DataFrame = {
 
-    val dfConverted = dataFrame.withColumn("day", to_date(col("date"), "yyyyMMdd"))
+    /*val dfConverted = dataFrame.withColumn("day", to_date(col("date"), "yyyyMMdd"))
 
-    val formattedDF = dfConverted.withColumn("day", date_format(col("day"), "dd/MM/yyyy"))
+    val formattedDF = dfConverted.withColumn("day", date_format(col("day"), "dd/MM/yyyy"))*/
 
     // Grouper les données et effectuer les agrégations
-    val groupedDF = formattedDF.groupBy("day", "type_recharge")
+    val groupedDF = dataFrame.groupBy("year","month","day", "type_recharge")
       .agg(
         count("*").as(alias + "_cnt"),
         sum("montant").as(alias + "_mnt")
       )
 
-    groupedDF.drop("date").select("day", "type_recharge", alias + "_cnt", alias + "_mnt")
+    groupedDF.select("year", "month","day", "type_recharge", alias + "_cnt", alias + "_mnt")
 
   }
 
@@ -162,13 +175,13 @@ object utils {
     val dfInAgg = agg_date_type_recharge(dfIn, "in")
     val dfZebraAgg = agg_date_type_recharge(dfZebra, "ze")
 
-    val dfJoin = dfInAgg.join(dfZebraAgg, Seq("day", "type_recharge"), "full")
+    val dfJoin = dfInAgg.join(dfZebraAgg, Seq("year","month","day", "type_recharge"), "full")
     val dfFinal = dfJoin
       .withColumn("ecart_cnt",
         when(col("in_cnt") >= col("ze_cnt"), col("in_cnt") - col("ze_cnt")).otherwise(-(col("ze_cnt") - col("in_cnt")) ))
       .withColumn("ecart_mnt",
         when(col("in_mnt") >= col("ze_mnt"), col("in_mnt") - col("ze_mnt")).otherwise(-(col("ze_mnt") - col("in_mnt")) ))
-    dfFinal.select("day", "type_recharge", "ecart_cnt", "ecart_mnt", "in_cnt", "in_mnt", "ze_cnt", "ze_mnt").orderBy("day", "type_recharge").na.fill(0)
+    dfFinal.select("type_recharge", "ecart_cnt", "ecart_mnt", "in_cnt", "in_mnt", "ze_cnt", "ze_mnt", "year", "month", "day").orderBy("year", "month", "day", "type_recharge").na.fill(0)
   }
 
 

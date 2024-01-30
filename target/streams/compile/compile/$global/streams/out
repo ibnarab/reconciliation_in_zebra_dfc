@@ -1,4 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\fonctions\read_write.scala:5:19: imported `schema_chemin_hdfs' is permanently hidden by definition of object schema_chemin_hdfs in package fonctions[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport  fonctions.schema_chemin_hdfs[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\fonctions\mail.scala:5:19: imported `read_write' is permanently hidden by definition of object read_write in package fonctions[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport fonctions.{read_write, schema_chemin_hdfs}[0m
 [0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\reconciliation_in_zebra\src\main\scala\fonctions\mail.scala:5:31: imported `schema_chemin_hdfs' is permanently hidden by definition of object schema_chemin_hdfs in package fonctions[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport fonctions.{read_write, schema_chemin_hdfs}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

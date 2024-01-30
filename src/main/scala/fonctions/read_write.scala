@@ -13,20 +13,30 @@ object read_write {
       .load(s"$chemin")
   }
 
-  def writeHiveInZebraGeneral(dataFrame: DataFrame) : Unit =  {
+  /*def writeHiveInZebra(dataFrame: DataFrame, header: Boolean, chemin: String, table: String) : Unit =  {
 
     dataFrame.write
       .mode(SaveMode.Overwrite)
-      .option("path", "dfc_temp.reconciiation_in_zebra_"+schema_chemin_hdfs.annee()+"_"+schema_chemin_hdfs.moisPrecedent())
-      .saveAsTable("dfc_temp.reconciiation_in_zebra_"+schema_chemin_hdfs.annee()+"_"+schema_chemin_hdfs.moisPrecedent())
+      .option("header", header)
+      .option("path", chemin)
+      .saveAsTable(table)
+  }*/
+
+  def writeHiveInZebra(dataFrame: DataFrame, header: Boolean, chemin: String, table: String) : Unit =  {
+    dataFrame.write
+      .mode(SaveMode.Overwrite)
+      .partitionBy("year", "month", "day") // Spécifier les colonnes de partition
+      .option("header", header)
+      .option("path", chemin)
+      .saveAsTable(table)
   }
 
-  def writeHiveInZebraAgr(dataFrame: DataFrame) : Unit =  {
+  /*def writeHiveInZebraAgr(dataFrame: DataFrame) : Unit =  {
 
     dataFrame.write
       .mode(SaveMode.Overwrite)
-      .option("path", "dfc_temp.in_zebra_agr_"+schema_chemin_hdfs.annee()+"_"+schema_chemin_hdfs.moisPrecedent())
-      .saveAsTable("in_zebra_agr_"+schema_chemin_hdfs.annee()+"_"+schema_chemin_hdfs.moisPrecedent())
-  }
+      .option("path", "dfc_temp.recharge_in_zebra_agr")
+      .saveAsTable("dfc_temp.recharge_in_zebra_agr_")
+  }*/
 
 }

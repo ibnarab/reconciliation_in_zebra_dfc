@@ -50,7 +50,7 @@ object schema_chemin_hdfs {
     )
   )
 
-  def annee(): Int = {
+  /*def annee(): Int = {
 
     // Obtenir la date du mois précédent
     val calendar = Calendar.getInstance()
@@ -68,7 +68,17 @@ object schema_chemin_hdfs {
 
   val chemin_in_detail = "/dlk/osn/refined/Recharge/recharge_in_detail/year="+annee()+"/month="+moisPrecedent()
 
-  val chemin_detaillee = "/dlk/osn/refined/Recharge/recharge_detaillee/year="+annee()+"/month="+moisPrecedent()
+  val chemin_detaillee = "/dlk/osn/refined/Recharge/recharge_detaillee/year="+annee()+"/month="+moisPrecedent()*/
+
+  val chemin_read_in_detail = "/dlk/osn/refined/Recharge/recharge_in_detail"
+  val chemin_read_detaillee = "/dlk/osn/refined/Recharge/recharge_detaillee"
+
+
+  val chemin_write_in_detail = "/warehouse/tablespace/external/hive/dfc_temp.db/reconciliation_recharge_in_zebra"
+  val chemin_write_detaillee = "/warehouse/tablespace/external/hive/dfc_temp.db/recharge_in_zebra_agr"
+
+  val table_write_in_detail = "dfc_temp.reconciliation_recharge_in_zebra"
+  val table_write_detaillee = "dfc_temp.recharge_in_zebra_agr"
 
 
 }
